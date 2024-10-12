@@ -1,0 +1,33 @@
+{
+  "name": "wdio_appium_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/login.ts",
+    "sl.login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/sl.login.ts",
+    "xero.register": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/xero.register.ts",
+    "reset": "appium plugin run device-farm reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.4",
+    "@wdio/cli": "^9.1.2",
+    "@wdio/config": "^9.1.2",
+    "@wdio/local-runner": "^9.1.2",
+    "@wdio/mocha-framework": "^9.1.2",
+    "@wdio/spec-reporter": "^9.1.2",
+    "@wdio/types": "^9.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "wdio-appium-service": "^0.2.3",
+    "webdriverio": "^9.1.2"
+  }
+}

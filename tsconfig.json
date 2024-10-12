@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es2019",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "types": ["node", "webdriverio/sync", "@wdio/mocha-framework"]
+    },
+    "include": [
+      "./test/**/*.ts",
+      "./pageObjects/**/*.ts"
+    ]
+  }
+  
