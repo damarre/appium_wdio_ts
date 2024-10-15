@@ -1,7 +1,7 @@
 ![Results](https://github.com/damarre/xero/blob/main/misc/result.png?raw=true)
 
 
-# # xero
+# # APPIUM WebdriverIO
 
 This project is an automated testing setup for a mobile application using WebdriverIO and Appium. It includes sample login tests and dashboard reset functionality.
 
