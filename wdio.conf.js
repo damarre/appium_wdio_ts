@@ -1,5 +1,7 @@
 let { join } = require('path');
 
+const todayBuild = new Date().toLocaleString('en-US', { weekday: 'long' });
+
 exports.config = {
     //
     // ====================
@@ -55,13 +57,12 @@ exports.config = {
         'appium:automationName': 'UiAutomator2',
         'appium:app': join(process.cwd(), '../../../Desktop/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
         'appium:noReset': false,
-        'appium:adbExecTimeout': 30000,
         'appium:appPackage': 'com.swaglabsmobileapp',
         'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
-        'appium:noReset': false,
         'appium:adbExecTimeout': 30000,
+        'appium:udid': 'RR8W5049QYN',
         'df:recordVideo': true,
-        'df:options': { saveDeviceLogs: true, build: 'Friday Noon' }
+        'df:options': { saveDeviceLogs: true, build: todayBuild }
     },
     {
         platformName: 'Android',
@@ -69,13 +70,12 @@ exports.config = {
         'appium:automationName': 'UiAutomator2',
         'appium:app': join(process.cwd(), './Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
         'appium:noReset': false,
-        'appium:adbExecTimeout': 30000,
         'appium:appPackage': 'com.swaglabsmobileapp',
         'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
-        'appium:noReset': false,
         'appium:adbExecTimeout': 30000,
+        'appium:udid': '69QKU4V4XKIJCI4D',
         'df:recordVideo': true,
-        'df:options': { saveDeviceLogs: true, build: 'Friday Noon' }
+        'df:options': { saveDeviceLogs: true, build: todayBuild }
     }],
 
 
