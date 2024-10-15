@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/login.ts",
-    "sl.login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/sl.login.ts",
-    "xero.register": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/xero.register.ts",
     "reset": "appium plugin run device-farm reset"
   },
   "keywords": [],

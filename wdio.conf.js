@@ -43,54 +43,35 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 2,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
-    //
-    // capabilities: [{
-    //     platformName: 'Android',
-    //     'appium:deviceName': 'Google_Pixel_2',
-    //     'appium:automationName': 'UiAutomator2',
-    //     // 'appium:app': join(process.cwd(), '../appium/regression-2024-09-02-16_11_56.apk'),
-    //     'appium:app': join(process.cwd(), '../../../Desktop/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
-    //     'appium:noReset': false,
-    //     'appium:adbExecTimeout': 30000,
-    //     'appium:appPackage': 'id.belajar.app.qa',
-    //     'appium:appActivity': 'id.belajar.app.MainActivity',
-    //     'appium:noReset': false,
-    //     'appium:adbExecTimeout': 30000,
-    //     'df:recordVideo': true,
-    //     'df:options': { saveDeviceLogs: true, build: 'Friday Noon' }
-    // }],
-
-    // capabilities: [{
-    //     platformName: 'Android',
-    //     'appium:deviceName': 'Google_Pixel_2',
-    //     'appium:automationName': 'UiAutomator2',
-    //     // 'appium:app': join(process.cwd(), '../appium/regression-2024-09-02-16_11_56.apk'),
-    //     'appium:app': join(process.cwd(), '../../../Desktop/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
-    //     'appium:noReset': false,
-    //     'appium:adbExecTimeout': 30000,
-    //     'appium:appPackage': 'com.swaglabsmobileapp',
-    //     'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
-    //     'appium:noReset': false,
-    //     'appium:adbExecTimeout': 30000,
-    //     'df:recordVideo': true,
-    //     'df:options': { saveDeviceLogs: true, build: 'Friday Noon' }
-    // }],
-
+    
     capabilities: [{
         platformName: 'Android',
         'appium:deviceName': 'Google_Pixel_2',
         'appium:automationName': 'UiAutomator2',
-        // 'appium:platformVersion': '14',
-        'appium:app': join(process.cwd(), '../../../Downloads/com.xero.touch_382_apps.evozi.com.apk'),
+        'appium:app': join(process.cwd(), '../../../Desktop/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
         'appium:noReset': false,
         'appium:adbExecTimeout': 30000,
-        'appium:appPackage': 'com.xero.touch',
-        'appium:appActivity': 'com.xero.touch.auth.splash.MainActivity',
+        'appium:appPackage': 'com.swaglabsmobileapp',
+        'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
+        'appium:noReset': false,
+        'appium:adbExecTimeout': 30000,
+        'df:recordVideo': true,
+        'df:options': { saveDeviceLogs: true, build: 'Friday Noon' }
+    },
+    {
+        platformName: 'Android',
+        'appium:deviceName': 'Google_Pixel_2',
+        'appium:automationName': 'UiAutomator2',
+        'appium:app': join(process.cwd(), './Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
+        'appium:noReset': false,
+        'appium:adbExecTimeout': 30000,
+        'appium:appPackage': 'com.swaglabsmobileapp',
+        'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
         'appium:noReset': false,
         'appium:adbExecTimeout': 30000,
         'df:recordVideo': true,

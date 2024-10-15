@@ -1,8 +1,8 @@
-import RegisterPage from '../../pageObjects/xero.register.page.js';
+import LoginPage from '../../pageObjects/sl.login.page.js';
 
-describe('As a user, I can register XERO', () => {
+describe('As a user, I can go to login page', () => {
 
-    it('User access page and fill data', async () => {
-        await RegisterPage.doRegister();
+    it('User accesses login page', async () => {
+        await LoginPage.doLogin();
     });
 });
