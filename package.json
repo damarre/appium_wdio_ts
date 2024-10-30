@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/login.ts",
+    "login": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/ai.login.ts",
     "reset": "appium plugin run device-farm reset",
     "visual": "npx wdio-visual-reporter --jsonOutput=tmp/actual/output.json --reportFolder=. [--logLevel=debug]",
     "debug_visual": "npx http-server report"

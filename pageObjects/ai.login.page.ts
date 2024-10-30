@@ -16,7 +16,7 @@ class LoginPage {
   }
 
   async selectProduct() {
-    await ais(`User click "Source Labs Backpack" text`);
+    await ai(`User click "Source Labs Backpack" text`);
   }
 }
 

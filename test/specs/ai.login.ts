@@ -1,4 +1,4 @@
-import LoginPage from '../../pageObjects/login.page.js';
+import LoginPage from '../../pageObjects/ai.login.page.js';
 
 describe('++ As a user, I can go to login page', () => {
 
