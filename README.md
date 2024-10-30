@@ -11,19 +11,23 @@ Ensure you have the following installed on your system:
 - Node.js (version 20.0.0 or higher)
 - npm (comes with Node.js)
 - Appium server
+- chatGPT api key
 
 Install the necessary dependencies by running:
 
 `npm install`
 
+Add your gptKey:
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+
 Run the test:
 
-`npm run login`
+`npm run ai.login`
 
 Reset dashboard:
 
 `npm run reset`
-
-## Article
-
-![See our journey](https://medium.com/@dear.ananta/exploring-appium-2-0-webdriverio-and-appium-device-farm-a-leap-forward-in-mobile-automation-e5f990c0e5a6)

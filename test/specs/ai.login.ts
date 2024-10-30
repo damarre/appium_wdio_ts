@@ -1,6 +1,6 @@
 import LoginPage from '../../pageObjects/ai.login.page.js';
 
-describe('++ As a user, I can go to login page', () => {
+describe('[AI] As a user, I can go to access product page', () => {
 
     it('User access login page', async () => {
         await LoginPage.doLogin();
