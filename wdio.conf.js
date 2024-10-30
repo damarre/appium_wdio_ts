@@ -1,4 +1,5 @@
 let { join } = require('path');
+const path = require('node:path');
 
 const todayBuild = new Date().toLocaleString('en-US', { weekday: 'long' });
 
@@ -45,7 +46,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 2,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -60,23 +61,24 @@ exports.config = {
         'appium:appPackage': 'com.swaglabsmobileapp',
         'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
         'appium:adbExecTimeout': 30000,
-        'appium:udid': 'RR8W5049QYN',
+        // 'appium:udid': 'RR8W5049QYN',
         'df:recordVideo': true,
         'df:options': { saveDeviceLogs: true, build: todayBuild }
     },
-    {
-        platformName: 'Android',
-        'appium:deviceName': 'Google_Pixel_2',
-        'appium:automationName': 'UiAutomator2',
-        'appium:app': join(process.cwd(), './Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
-        'appium:noReset': false,
-        'appium:appPackage': 'com.swaglabsmobileapp',
-        'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
-        'appium:adbExecTimeout': 30000,
-        'appium:udid': '69QKU4V4XKIJCI4D',
-        'df:recordVideo': true,
-        'df:options': { saveDeviceLogs: true, build: todayBuild }
-    }],
+    // {
+    //     platformName: 'Android',
+    //     'appium:deviceName': 'Google_Pixel_2',
+    //     'appium:automationName': 'UiAutomator2',
+    //     'appium:app': join(process.cwd(), './Android.SauceLabs.Mobile.Sample.app.2.7.1.apk'),
+    //     'appium:noReset': false,
+    //     'appium:appPackage': 'com.swaglabsmobileapp',
+    //     'appium:appActivity': 'com.swaglabsmobileapp.SplashActivity',
+    //     'appium:adbExecTimeout': 30000,
+    //     'appium:udid': '69QKU4V4XKIJCI4D',
+    //     'df:recordVideo': true,
+    //     'df:options': { saveDeviceLogs: true, build: todayBuild }
+    // }
+    ],
 
 
     // ===================
@@ -126,10 +128,26 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: [
-        ['appium', {
+        [
+          'appium',
+          {
             command: 'appium',
-        }]
-    ],
+          },
+        ],
+        [
+          'visual',
+          {
+            // Some options, see the docs for more
+            baselineFolder: path.join(process.cwd(), 'test', 'baseline'),
+            formatImageName: '{tag}-{logName}-{width}x{height}',
+            screenshotPath: path.join(process.cwd(), 'tmp'),
+            savePerInstance: true,
+            autoSaveBaseline: true,
+            createJsonReportFiles: true
+          },
+        ],
+      ],
+      
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

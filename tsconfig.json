@@ -6,7 +6,7 @@
       "esModuleInterop": true,
       "skipLibCheck": true,
       "moduleResolution": "node",
-      "types": ["node", "webdriverio/sync", "@wdio/mocha-framework"]
+      "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "@wdio/visual-service"]
     },
     "include": [
       "./test/**/*.ts",
