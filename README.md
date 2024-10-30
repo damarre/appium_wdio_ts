@@ -31,3 +31,7 @@ Run the test:
 Reset dashboard:
 
 `npm run reset`
+
+[Watch the demo](https://vimeo.com/1024663759)
+
+[Execution](https://vimeo.com/1024662226)
